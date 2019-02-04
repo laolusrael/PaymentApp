@@ -1,0 +1,119 @@
+﻿@model PaymentDto
+@{
+    ViewData["Title"] = "Order Summary";
+    Layout = "~/Views/Shared/_Blanks.cshtml";
+
+    var orderSummary = (OrderSummaryDto)ViewBag.OrderSummary ?? new OrderSummaryDto();
+}
+
+
+<div class="container-fluid">
+
+    <h1>Order Summary</h1>
+    <hr />
+
+    <div class="row">
+        
+        <div class="col-md-6">
+
+            <h3>Order </h3>
+
+            @if(orderSummary != null)
+            {
+
+                <table class="table table-condensed table-striped">
+                    <tbody>
+                        <tr>
+                            <th>Customer</th><td>@orderSummary.FirstName @orderSummary.LastName</td>
+                        </tr>
+                        <tr>
+                            <th>Total </th><td>@orderSummary.Total.ToString("$ #, ###.00")</td>
+                        </tr>
+                        <tr>
+                            <th>Status</th><td>@orderSummary.Status</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+                <h3>Items</h3>
+                <table class="table table-condensed table-striped">
+                    <thead>
+                        <tr>
+                            <th>Item</th><th>Quantity</th><th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach(var item in orderSummary.Items)
+                        {
+                            <tr>
+                                <td>@item.Product</td>
+                                <td>@item.Quantity</td>
+                                <td>@item.Price.ToString("$ #, ###.00")</td>
+                            </tr>
+                        }
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td></td><th>Total</th><td>@orderSummary.Items.Sum( s => s.Price).ToString("$ #, ##0.00")</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            }
+            else
+            {
+
+                <div class="alert alert-info">
+                    <p>Order Summary not found</p>
+                </div>
+            }
+
+        </div>
+        <div class="col-md-6">
+
+            <h3> Make Payment</h3>
+
+            @if (orderSummary != null && (orderSummary.Status == "NEW" || orderSummary.Status == "VIEWED"))
+            {
+
+            <form asp-action="OrderDetails" method="post">
+
+
+                @if (ViewContext.ModelState.IsValid == false)
+                {
+                    <div class="row">
+                        <fieldset>
+                            <div class="alert alert-danger">
+                                @Html.ValidationSummary()
+                            </div>
+                        </fieldset>
+                    </div>
+                }
+
+
+                <input type="hidden" name="OrderId" value="@Model.OrderId" />
+
+                <div class="row">
+                    <fieldset class="col-md-8">
+                        <div class="form-group">
+                            <label>Credit Card Number</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
+                                <input type="text" value="@Model.CreditCardNumber" name="CreditCardNumber" class="form-control" />
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="submit" value="Pay" class="btn btn-primary" />
+                    </div>
+                </div>
+            </form>
+
+                }
+
+            </div>
+    </div>
+   
+</div>

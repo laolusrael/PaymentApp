@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Entities\AdminEntities\**" />
+    <Compile Remove="Entities\InstructorEntities\**" />
+    <EmbeddedResource Remove="Entities\AdminEntities\**" />
+    <EmbeddedResource Remove="Entities\InstructorEntities\**" />
+    <None Remove="Entities\AdminEntities\**" />
+    <None Remove="Entities\InstructorEntities\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.5.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Helpers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PaymentApp.Core.Shared\PaymentApp.Core.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

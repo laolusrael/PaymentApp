@@ -1,0 +1,66 @@
+﻿@model PaymentApp.Core.Shared.Dtos.DateConfirmationDto
+@{
+    ViewData["Title"] = "Welcome";
+
+    if (Model.DateOfBirth == DateTime.MinValue)
+    {
+        Model.DateOfBirth = DateTime.Today;
+    }
+}
+
+
+
+<div class="container-fluid" style="margin-top:100px;">
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h1 class="text-center">Welcome</h1>
+            <hr />
+
+            <div class="row">
+                <div class="">
+                    <h3 class="text-center">
+                        Welcome to your order payment page<br />
+                    </h3>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-2 col-md-offset-5">
+            @using (Html.BeginForm(FormMethod.Post))
+            {
+                <input asp-for="OrderId" type="hidden" />
+
+                @if (Html.ViewContext.ModelState.IsValid == false)
+                {
+                    <div class="row">
+                        <div class="alert alert-danger">
+                            <p>@Html.ValidationSummary()</p>
+                        </div>
+                    </div>
+                }
+
+                    <div class="row">
+
+                        <div class="form-group">
+                            <label for="DateOfBirth" class="control-label">Date of Birth</label>
+                            <input asp-for="DateOfBirth" type="text" class="datepicker form-control" />
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <input type="submit" value="Confirm" class="btn btn-primary form-control" />
+                        </div>
+                    </div>
+
+            }
+        </div>
+    </div>
+
+</div>
+
+

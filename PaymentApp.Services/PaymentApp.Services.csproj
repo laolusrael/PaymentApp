@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Accounts\**" />
+    <EmbeddedResource Remove="Accounts\**" />
+    <None Remove="Accounts\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Postal.AspNetCore" Version="2.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PaymentApp.Core\PaymentApp.Core.csproj" />
+  </ItemGroup>
+
+</Project>

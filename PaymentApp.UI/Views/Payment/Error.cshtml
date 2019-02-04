@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "Error";
+    Layout = "~/Views/Shared/_Blanks.cshtml";
+
+    var errMessage = TempData["Message"] ?? "";
+
+
+
+}
+
+<div class="container-fluid">
+
+    <h1>Error :( </h1>
+    <hr/>
+
+    <div class="alert alert-danger center-block">
+        <p>@errMessage</p>
+    </div>
+    
+</div>
+
+
+
+

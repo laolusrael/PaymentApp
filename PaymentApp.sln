@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentApp.Core", "PaymentApp.Core\PaymentApp.Core.csproj", "{6FAAED4A-B550-481F-8783-CE090FAEE5DB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentApp.Persistence", "PaymentApp.Persistence\PaymentApp.Persistence.csproj", "{E170E834-DC45-40EA-98CF-45B9644AC78B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentApp.Services", "PaymentApp.Services\PaymentApp.Services.csproj", "{F0D6A481-E5B0-43AD-9EA0-A33A4D4F0184}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentApp.Api", "PaymentApp.Api\PaymentApp.Api.csproj", "{D0FF7F3F-A6FE-4CF5-B869-96103C1A2C28}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentApp.UI", "PaymentApp.UI\PaymentApp.UI.csproj", "{E510E861-AD07-4138-B4B0-A075B390F00E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentApp.Core.Shared", "PaymentApp.Core.Shared\PaymentApp.Core.Shared.csproj", "{5BEB92CB-D522-4250-9387-D8711ACC9D3C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6FAAED4A-B550-481F-8783-CE090FAEE5DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FAAED4A-B550-481F-8783-CE090FAEE5DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FAAED4A-B550-481F-8783-CE090FAEE5DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FAAED4A-B550-481F-8783-CE090FAEE5DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E170E834-DC45-40EA-98CF-45B9644AC78B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E170E834-DC45-40EA-98CF-45B9644AC78B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E170E834-DC45-40EA-98CF-45B9644AC78B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E170E834-DC45-40EA-98CF-45B9644AC78B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0D6A481-E5B0-43AD-9EA0-A33A4D4F0184}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0D6A481-E5B0-43AD-9EA0-A33A4D4F0184}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0D6A481-E5B0-43AD-9EA0-A33A4D4F0184}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0D6A481-E5B0-43AD-9EA0-A33A4D4F0184}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0FF7F3F-A6FE-4CF5-B869-96103C1A2C28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0FF7F3F-A6FE-4CF5-B869-96103C1A2C28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0FF7F3F-A6FE-4CF5-B869-96103C1A2C28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0FF7F3F-A6FE-4CF5-B869-96103C1A2C28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E510E861-AD07-4138-B4B0-A075B390F00E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E510E861-AD07-4138-B4B0-A075B390F00E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E510E861-AD07-4138-B4B0-A075B390F00E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E510E861-AD07-4138-B4B0-A075B390F00E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BEB92CB-D522-4250-9387-D8711ACC9D3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BEB92CB-D522-4250-9387-D8711ACC9D3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BEB92CB-D522-4250-9387-D8711ACC9D3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BEB92CB-D522-4250-9387-D8711ACC9D3C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {245E4A49-043E-40A1-8C29-CB414D617BF8}
+	EndGlobalSection
+EndGlobal
